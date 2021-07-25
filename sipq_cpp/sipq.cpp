@@ -24,15 +24,15 @@ using namespace std;
 
 #define STKSIZE 100'000 //stack size
 
-#define NUM_SIMD_DATA 8 //SIMD에 적재할 수 있는 32비트 정수의 개수
 #define SIMD_SIZE_BIT 256 //the size of SIMD register
+#define NUM_SIMD_DATA SIMD_SIZE_BIT / 32 //SIMD에 적재할 수 있는 32비트 정수의 개수
 #define NUM_SIMD_SHIFT 3 //SIMD 레지스터에 미리 적재할 묶음 개수
 
 #define RDMAX 32'767
 
 #define NUM_THREADS 4 //스레드 개수 (기본값 : 16)
-#define NUM_RANGES 2'048 //범위 개수 (기본값 : 1024)
-#define NUM_SECTIONS 4'096 //구간 개수 (기본값 : 4096)
+#define NUM_RANGES 1024 //범위 개수 (기본값 : 1024)
+#define NUM_SECTIONS 4096 //구간 개수 (기본값 : 4096)
 #define NUM_SAMPLES 512 //샘플링 개수 (기본값 : 512)
 
 #define SORTSIMD 1 //1: SIMD 정렬 , 0: 스칼라 정렬
